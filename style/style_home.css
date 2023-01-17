@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    background: black;
+
+}
+
+#calculadora{
+
+    width: 300px;
+    display: grid;
+    margin: 200px auto;
+    text-align: center;
+}
+
+input, button{
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+#button{
+    cursor: pointer;
+    width: 100px;
+
+}
+
+button:focus{
+    transition: 1s;
+
+    background-color: blue;
+    color: white;
+}
+
+#buttons{
+    margin-top: 10px;
+}
+
+#visor{
+    background-color: gray;
+}
+
+p{
+    color: white;
+
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style/style_home.css">
+        <script defer src="./js/script_mudar_tema.js"></script>
+        <title>Home</title>
+    </head>
+
+    <body>
+        <div id="calculadora">
+            <div id="visor">
+                <p id="texto_visor">Resultado aparecerá aqui</p>
+            </div>
+
+
+            <input id="valor_um" type="number" placeholder="0">
+            <input id="valor_dois" type="number" placeholder="0">
+
+            <div id="buttons">
+                <button  accesskey="+" id="button" onclick="somar()">+</button>
+                <button  accesskey="-" id="button" onclick="subtrair()">-</button>
+                <button  accesskey="*" id="button" onclick="multiplicar()">x</button>
+                <button  accesskey="/" id="button" onclick="dividir()">D/v</button>
+            </div>
+        </div>
+
+        <script>
+            function somar(){
+                var valor_um = document.getElementById('valor_um')
+                valor_um = Number(valor_um.value)
+        
+                var valor_dois = document.getElementById('valor_dois')
+                valor_dois = Number(valor_dois.value)
+                
+                var resultado = (valor_um + valor_dois)
+                
+                let visor = document.getElementById('texto_visor')
+
+                visor.innerText= `${valor_um} + ${valor_dois} = ${resultado}`
+                
+
+            }
+            
+            function subtrair(){
+                var valor_um = document.getElementById('valor_um')
+                valor_um = Number(valor_um.value)
+        
+                var valor_dois = document.getElementById('valor_dois')
+                valor_dois = Number(valor_dois.value)
+                
+                var resultado = (valor_um - valor_dois)
+                
+                var visor = document.getElementById('texto_visor')
+
+                visor.innerText = `${valor_um} - ${valor_dois} = ${resultado}`
+            } 
+
+            function multiplicar(){
+                var valor_um = document.getElementById('valor_um')
+                valor_um = Number(valor_um.value)
+        
+                var valor_dois = document.getElementById('valor_dois')
+                valor_dois = Number(valor_dois.value)
+                
+                var resultado = (valor_um * valor_dois)
+                
+                var visor = document.getElementById('texto_visor')
+                visor.innerText = `${valor_um} * ${valor_dois} = ${resultado}`                
+            }
+
+            function dividir(){
+                var valor_um = document.getElementById('valor_um')
+                valor_um = Number(valor_um.value)
+        
+                var valor_dois = document.getElementById('valor_dois')
+                valor_dois = Number(valor_dois.value)
+                
+                var resultado = (valor_um / valor_dois)
+                
+                var visor = document.getElementById('texto_visor')
+                visor.innerText = `${valor_um} / ${valor_dois} = ${resultado}  `
+                
+            }
+        </script>
+    </body>
+</html>
